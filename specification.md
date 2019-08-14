@@ -21,7 +21,7 @@ You may wish to work on extensions of an already-existing, open-source project i
 ## Overview
 
 1. You'll be cloning an existing repository. The repository is located at: 
-          https://gitlab.com/simont/inft2063_assignment_1.git
+          https://gitlab.com/ivanleeunisa/inft2063_assignment_1.git
    This code is broken and buggy. 
 
 2. Your group is welcome to use any of the online Git repository sites: 
