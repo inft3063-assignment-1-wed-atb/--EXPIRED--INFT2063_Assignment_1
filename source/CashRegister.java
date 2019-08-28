@@ -27,7 +27,7 @@ public class CashRegister
       s = in.nextLine();
       c = Double.toString(Double.parseDouble(s) + trans.getCost());
 
-      System.out.println("Amount of change required = " + c);
+      System.out.println("Amount of change required = $" + c);
 
       c = Double.toString(balance + trans.getCost());
 
