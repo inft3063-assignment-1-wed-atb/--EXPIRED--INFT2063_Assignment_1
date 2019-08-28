@@ -7,6 +7,8 @@ public class CashRegister
       String s, c;
       double balance;
 
+      //comment
+      
       Scanner in = new Scanner(System.in);
 
       System.out.print("Please entr cash register's float:");
