@@ -8,7 +8,7 @@ public class CashRegister
       double balance;
 
       //comment
-      //Anthony was here.
+      //Anthony was here
       
       Scanner in = new Scanner(System.in);
 
