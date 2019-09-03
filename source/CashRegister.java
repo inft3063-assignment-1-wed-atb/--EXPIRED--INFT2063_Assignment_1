@@ -11,7 +11,7 @@ public class CashRegister
 
       //comment
       //Anthony was here.
-      //Test comment 2.
+      //Test comment 2
       
       Scanner in = new Scanner(System.in);
 
