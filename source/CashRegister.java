@@ -4,6 +4,8 @@ public class CashRegister
 {
    public static void main(String[] args)
    {
+	  String dollar_symbol = "$"; 
+	  
       String s, c;
       double balance;
 
@@ -28,11 +30,11 @@ public class CashRegister
       s = in.nextLine();
       c = Double.toString(Double.parseDouble(s) + trans.getCost());
 
-      System.out.println("Amount of change required = $" + c);
+      System.out.println("Amount of change required = " + dollar_symbol + c);
 
       c = Double.toString(balance + trans.getCost());
 
-      System.out.println("Balance of the Cash Register:");
+      System.out.println("Balance of the Cash Register: " + dollar_symbol + c);
 
 
 
