@@ -45,7 +45,7 @@ public class CashRegister {
 				System.out.println("Balance of the Cash Register: " + dollar_symbol + c);
 
 			}
-
+// thanks for coming should be changed in the next update
 			else if (proceed == 'n' || proceed == 'N') {
 				System.out.println("Thanks for coming.");
 				endProgram=false;
