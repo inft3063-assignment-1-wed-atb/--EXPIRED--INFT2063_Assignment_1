@@ -39,12 +39,11 @@ public class CashRegister {
 
 				c = Double.toString(balance + trans.getCost());
 
-				System.out.println("Balance of the Cash Register: " + dollar_symbol + c);
-
 			}
 // thanks for coming should be changed in the next update
 			else if (proceed.equalsIgnoreCase("n")) {
 				System.out.println("Thanks for coming.");
+				System.out.println("Balance of the Cash Register: " + dollar_symbol + c);
 				endProgram=false;
 			}
 
