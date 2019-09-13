@@ -9,10 +9,6 @@ public class CashRegister {
 		double balance;
 		boolean endProgram = true;
 
-		// comment
-		// Anthony was here.
-		// Test comment 2.
-
 		Scanner in = new Scanner(System.in);
 
 		System.out.print("Please enter cash register's float:");
@@ -57,7 +53,6 @@ public class CashRegister {
 
 		}
 
-		// 2:13am Test
 
 	}
 }
