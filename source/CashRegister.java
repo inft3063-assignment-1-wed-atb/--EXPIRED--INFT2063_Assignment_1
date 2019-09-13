@@ -5,7 +5,7 @@ public class CashRegister {
 		String dollar_symbol = "$";
 
 		String s, c;
-		char proceed;
+		String proceed;
 		double balance;
 		boolean endProgram = true;
 
@@ -18,9 +18,9 @@ public class CashRegister {
 		while (endProgram) {
 			
 			System.out.println("Would you like to proceed with the transaction? (y/n)");
-			proceed = in.next().charAt(0);
+			proceed = in.nextLine();
 
-			if (proceed == 'y' || proceed == 'Y') {
+			if (proceed.equalsIgnoreCase("y")) {
 
 				System.out.print("Please enter the item's name:");
 				s = in.nextLine();
@@ -42,7 +42,7 @@ public class CashRegister {
 
 			}
 // thanks for coming should be changed in the next update
-			else if (proceed == 'n' || proceed == 'N') {
+			else if (proceed.equalsIgnoreCase("n")) {
 				System.out.println("Thanks for coming.");
 				endProgram=false;
 			}
