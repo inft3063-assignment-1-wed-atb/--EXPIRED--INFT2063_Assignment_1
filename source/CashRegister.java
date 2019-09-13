@@ -4,7 +4,8 @@ public class CashRegister {
 	public static void main(String[] args) {
 		String dollar_symbol = "$";
 
-		String s, c;
+		String s; 
+		String c = "Nil";
 		String proceed;
 		double balance;
 		boolean endProgram = true;
