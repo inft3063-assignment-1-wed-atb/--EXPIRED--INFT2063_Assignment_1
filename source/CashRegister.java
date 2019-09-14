@@ -4,7 +4,7 @@ public class CashRegister {
 	public static void main(String[] args) {
 		String dollar_symbol = "$";
 
-		String s; 
+		String s;
 		String c = "Nil";
 		String proceed;
 		double balance;
@@ -17,7 +17,7 @@ public class CashRegister {
 		balance = Double.parseDouble(s);
 
 		while (endProgram) {
-			
+
 			System.out.println("Would you like to proceed with the transaction? (y/n)");
 			proceed = in.nextLine();
 
@@ -40,11 +40,9 @@ public class CashRegister {
 				c = Double.toString(balance + trans.getCost());
 
 			}
-// thanks for coming should be changed in the next update
+			// thanks for coming should be changed in the next update
 			else if (proceed.equalsIgnoreCase("n")) {
-				System.out.println("Thanks for coming.");
-				System.out.println("Balance of the Cash Register: " + dollar_symbol + c);
-				endProgram=false;
+				endProgram = false;
 			}
 
 			else {
@@ -53,6 +51,28 @@ public class CashRegister {
 
 		}
 
+		endProgram = true;
+
+		System.out.println("Would you like a copy of your reciept? (y/n)");
+		proceed = in.nextLine();
+		while (endProgram) {
+
+			System.out.println("Would you like a copy of your reciept? (y/n)");
+			proceed = in.nextLine();
+			
+			if (proceed.equalsIgnoreCase("y")) {
+				
+			}
+			else if(proceed.equalsIgnoreCase("n")) {
+				endProgram=false;
+			}
+			else {
+				System.out.println("Invalid input. Please try again");
+			}
+		}
+
+		System.out.println("Thanks for coming.");
+		System.out.println("Balance of the Cash Register: " + dollar_symbol + c);
 
 	}
 }
