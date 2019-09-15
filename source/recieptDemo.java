@@ -45,7 +45,7 @@ public class recieptDemo {
 
 	public String printReciept() {
 
-		reciept = "TAX RECIEPT\n" + "UniSA Groceries Pty Ltd\n" + "Shop 3A, 40 Main Street, Mawson Lakes, SA\n"
+		reciept = "\nTAX RECIEPT\n" + "UniSA Groceries Pty Ltd\n" + "Shop 3A, 40 Main Street, Mawson Lakes, SA\n"
 				+ "ABN 23 234 680 230\nCashier: Jeusus\n" + "\n";
 		
 		reciept = reciept + "Item" + spaces(20) + "QTY" + spaces(2) + "Price" + spaces(2) + "Subtotal\n";
@@ -78,7 +78,7 @@ public class recieptDemo {
 		reciept = reciept + "    || |||| ||||||| |||||| ||||| ||||||||\n";
 		reciept = reciept + "    || |||| ||||||| |||||| ||||| ||||||||\n\n";
 		
-		reciept = reciept + "        " + today;
+		reciept = reciept + "        " + today +"\n";
 		
 		return reciept;
 

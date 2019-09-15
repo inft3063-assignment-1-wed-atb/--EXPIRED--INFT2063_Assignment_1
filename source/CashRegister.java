@@ -4,19 +4,24 @@ public class CashRegister {
 	public static void main(String[] args) {
 		String dollar_symbol = "$";
 
-		String s;
-		String c = "Nil";
+		String itemName;
+		String itemCost = "Nil";
+		String cash;
+		String change;
 		String proceed;
+		String register;
+		String c ="0";
 		double balance;
-		boolean endProgram = true;
+		boolean endProgram = false;
+		recieptDemo reciept = new recieptDemo();
 
 		Scanner in = new Scanner(System.in);
 
 		System.out.print("Please enter cash register's float:");
-		s = in.nextLine();
-		balance = Double.parseDouble(s);
+		register = in.nextLine();
+		balance = Double.parseDouble(register);
 
-		while (endProgram) {
+		while (!endProgram) {
 
 			System.out.println("Would you like to proceed with the transaction? (y/n)");
 			proceed = in.nextLine();
@@ -24,25 +29,28 @@ public class CashRegister {
 			if (proceed.equalsIgnoreCase("y")) {
 
 				System.out.print("Please enter the item's name:");
-				s = in.nextLine();
+				itemName = in.nextLine();
 
 				System.out.print("Please enter the item's cost:");
-				c = in.nextLine();
+				itemCost = in.nextLine();
 
-				Transaction trans = new Transaction(s, Double.parseDouble(c));
+				Transaction trans = new Transaction(itemName, Double.parseDouble(itemCost));
 
 				System.out.print("Please enter the cash amount tendered:");
-				s = in.nextLine();
-				c = Double.toString(Double.parseDouble(s) - trans.getCost());
+				cash = in.nextLine();
+				change = Double.toString(Double.parseDouble(cash) - trans.getCost());
 
-				System.out.println("Amount of change required = " + dollar_symbol + c);
+				System.out.println("Amount of change required = " + dollar_symbol + change);
 
 				c = Double.toString(balance + trans.getCost());
+				
+				reciept.itemDetails(itemName, Double.parseDouble(itemCost), 1);
+				reciept.cash(Double.parseDouble(cash));
 
 			}
 			// thanks for coming should be changed in the next update
 			else if (proceed.equalsIgnoreCase("n")) {
-				endProgram = false;
+				endProgram = true;
 			}
 
 			else {
@@ -51,20 +59,19 @@ public class CashRegister {
 
 		}
 
-		endProgram = true;
+		endProgram = false;
 
-		System.out.println("Would you like a copy of your reciept? (y/n)");
-		proceed = in.nextLine();
-		while (endProgram) {
+		while (!endProgram) {
 
 			System.out.println("Would you like a copy of your reciept? (y/n)");
 			proceed = in.nextLine();
 			
 			if (proceed.equalsIgnoreCase("y")) {
-				
+				System.out.println(reciept.printReciept());
+				endProgram = true;
 			}
 			else if(proceed.equalsIgnoreCase("n")) {
-				endProgram=false;
+				endProgram=true;
 			}
 			else {
 				System.out.println("Invalid input. Please try again");
