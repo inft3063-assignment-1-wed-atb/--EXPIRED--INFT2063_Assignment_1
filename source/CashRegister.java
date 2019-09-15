@@ -17,11 +17,12 @@ public class CashRegister {
 
 		Scanner in = new Scanner(System.in);
 
-		System.out.print("Please enter cash register's float:");
-		register = in.nextLine();
-		balance = Double.parseDouble(register);
-
 		while (!endProgram) {
+			
+			try {
+			System.out.print("Please enter cash register's float:");
+			register = in.nextLine();
+			balance = Double.parseDouble(register);
 
 			System.out.println("Would you like to proceed with the transaction? (y/n)");
 			proceed = in.nextLine();
@@ -46,8 +47,8 @@ public class CashRegister {
 				
 				reciept.itemDetails(itemName, Double.parseDouble(itemCost), 1);
 				reciept.cash(Double.parseDouble(cash));
-
 			}
+			
 			// thanks for coming should be changed in the next update
 			else if (proceed.equalsIgnoreCase("n")) {
 				endProgram = true;
@@ -56,9 +57,11 @@ public class CashRegister {
 			else {
 				System.out.println("Invalid input. Please try again");
 			}
-
+			} catch(Exception e) {
+				System.out.println("Invalid input, please enter a valid number");
+			}
 		}
-
+		
 		endProgram = false;
 
 		while (!endProgram) {
