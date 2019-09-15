@@ -15,30 +15,30 @@ public class CashRegister {
 		boolean endProgram = false;
 		recieptDemo reciept = new recieptDemo();
 
-		Scanner in = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 
 		while (!endProgram) {
 			
 			try {
 			System.out.print("Please enter cash register's float:");
-			register = in.nextLine();
+			register = input.nextLine();
 			balance = Double.parseDouble(register);
 
 			System.out.println("Would you like to proceed with the transaction? (y/n)");
-			proceed = in.nextLine();
+			proceed = input.nextLine();
 
 			if (proceed.equalsIgnoreCase("y")) {
 
 				System.out.print("Please enter the item's name:");
-				itemName = in.nextLine();
+				itemName = input.nextLine();
 
 				System.out.print("Please enter the item's cost:");
-				itemCost = in.nextLine();
+				itemCost = input.nextLine();
 
 				Transaction trans = new Transaction(itemName, Double.parseDouble(itemCost));
 
 				System.out.print("Please enter the cash amount tendered:");
-				cash = in.nextLine();
+				cash = input.nextLine();
 				change = Double.toString(Double.parseDouble(cash) - trans.getCost());
 
 				System.out.println("Amount of change required = " + dollar_symbol + change);
@@ -67,7 +67,7 @@ public class CashRegister {
 		while (!endProgram) {
 
 			System.out.println("Would you like a copy of your reciept? (y/n)");
-			proceed = in.nextLine();
+			proceed = input.nextLine();
 			
 			if (proceed.equalsIgnoreCase("y")) {
 				System.out.println(reciept.printReciept());
